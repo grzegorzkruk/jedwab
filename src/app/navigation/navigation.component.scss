@@ -1,0 +1,29 @@
+
+
+.ds-nav{
+    height: 100px;
+    &-list{
+        list-style: none;
+        position: relative;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        margin: 0 30px;
+        &__item{
+            color: white;
+            display: flex;
+            font-size: 30px;
+            align-items: center;
+            cursor: pointer;
+            &:not(:last-child)::after{
+                content: '';
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background: red;
+                margin: 0 30px;
+                border-radius: 100%;
+            }
+        }
+    }
+}

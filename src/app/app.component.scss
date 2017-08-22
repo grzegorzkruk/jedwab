@@ -1,0 +1,13 @@
+@import "app.variables";
+.ds-header{
+    width: 100%;
+    background: $bg-ds-header;
+    box-shadow: $shadow-ds-header;
+    display: flex;
+    justify-content: space-between;
+}
+
+ds-logo,
+ds-navigation{
+    display: inline-block;
+}
