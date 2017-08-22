@@ -1,0 +1,28 @@
+.map-list{
+    position: absolute;
+    top: 10px;
+}
+
+.map-list-container{
+    width: 120px;
+    position: relative;
+}
+
+.map-list-item{
+    width: 30px;
+    height: 20px;
+    display: block;
+    background: red;
+    margin: 30px;
+}
+
+.map-list-item:not(:first-child){
+    width: 30px;
+    height: 0;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.open .map-list-item:not(:first-child){
+    height: 20px;
+}

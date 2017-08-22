@@ -5,14 +5,21 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LogoComponent } from './logo/logo.component';
 
+import { SlickModule } from 'ngx-slick';
+import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
+import { MapListComponent } from './map-list/map-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    LogoComponent
+    LogoComponent,
+    ImageCarouselComponent,
+    MapListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SlickModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

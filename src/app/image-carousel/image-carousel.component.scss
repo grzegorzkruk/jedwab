@@ -1,0 +1,15 @@
+ngx-slick{
+    height: 90vh;
+    .slide{
+        height: 90vh;
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+        .slide-content{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
