@@ -8,6 +8,9 @@ import { LogoComponent } from './logo/logo.component';
 import { SlickModule } from 'ngx-slick';
 import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
 import { MapListComponent } from './map-list/map-list.component';
+import { DsContentBoxComponent } from './ds-content-box/ds-content-box.component';
+import { DsContactFormComponent } from './ds-contact-form/ds-contact-form.component';
+import { NguiMapModule } from '@ngui/map';
 
 @NgModule({
   declarations: [
@@ -15,11 +18,14 @@ import { MapListComponent } from './map-list/map-list.component';
     NavigationComponent,
     LogoComponent,
     ImageCarouselComponent,
-    MapListComponent
+    MapListComponent,
+    DsContentBoxComponent,
+    DsContactFormComponent
   ],
   imports: [
     BrowserModule,
-    SlickModule.forRoot()
+    SlickModule.forRoot(),
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyD7F1DLtiFxFWSHvpkul-6RtdrsJ-LiIdI'})
   ],
   providers: [],
   bootstrap: [AppComponent]

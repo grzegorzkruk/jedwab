@@ -1,0 +1,39 @@
+.ds-contact-form{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    label{
+        width: 100%;
+    }
+}
+
+.ds-input{
+    background: transparent;
+    border: 1px solid #a35e80;
+    border-radius: 5px;
+    color: white;
+}
+
+.ds-input--textarea{
+    min-height: 200px
+}
+
+.ds-input:-moz-placeholder{
+    color: #a35e80;
+}
+.ds-input::-webkit-input-placeholder{
+    color: #a35e80;
+}
+.ds-input:-ms-input-placeholder{
+    color: #a35e80;
+}
+
+.ds-button{
+    background: #a35e80;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+}

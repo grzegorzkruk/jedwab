@@ -1,8 +1,10 @@
 <div class="map-list-container">
-  <div class="map-list" (click)="toggleList()" [ngClass]="{'open': isOpen}">
-    <div class="map-list-item"></div>
-    <div class="map-list-item"></div>
-    <div class="map-list-item"></div>
-    <div class="map-list-item"></div>
+  <div class="map-list" (click)="toggleList()">
+    <div class="map-item"></div>
+    <div class="map-expand-list" [ngClass]="{'open': isOpen}">
+      <div class="map-expand-list-item"></div>
+      <div class="map-expand-list-item"></div>
+      <div class="map-expand-list-item"></div>
+    </div>
   </div>
 </div>

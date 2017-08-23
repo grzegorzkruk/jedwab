@@ -1,7 +1,24 @@
-<ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
-    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-        <div class="slide-content">
-          nowy
+<div class="carousel">
+    <ngx-slick #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <div class="slide-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ds-content-box class="ds-content-box-bg" [title]="'Testowy'">
+                                <p>{{ slide.text }}</p>
+                            </ds-content-box>
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </ngx-slick>
+    <div class="carousel-button__container carousel-button__container--prev">
+        <button class="carousel-button"></button>
     </div>
-</ngx-slick>
+    <div class="carousel-button__container carousel-button__container--next">
+        <button class="carousel-button"></button>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 .map-list{
-    position: absolute;
-    top: 10px;
+    z-index: 999;
+    top: 0;
 }
 
 .map-list-container{
@@ -8,7 +8,8 @@
     position: relative;
 }
 
-.map-list-item{
+.map-item{
+    position: relative;
     width: 30px;
     height: 20px;
     display: block;
@@ -16,13 +17,20 @@
     margin: 30px;
 }
 
-.map-list-item:not(:first-child){
-    width: 30px;
-    height: 0;
-    display: block;
-    transition: all 0.5s ease;
+.map-expand-list{
+    position: absolute;
+    z-index: 9999;
+    top: 30px;
+    &-item{
+        width: 30px;
+        height: 0;
+        background: red;
+        display: block;
+        margin: 30px;
+        transition: all 0.5s ease;
+    }
 }
 
-.open .map-list-item:not(:first-child){
+.open .map-expand-list-item{
     height: 20px;
 }

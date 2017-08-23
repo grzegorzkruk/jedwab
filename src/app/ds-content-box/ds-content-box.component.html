@@ -1,0 +1,10 @@
+<div class="ds-content-box">
+  <div class="ds-content-box__heading">
+    <div class="ds-deco-line ds-deco-line--right"></div>
+    <h1 class="ds-content-box__title">{{title}}</h1>
+    <div class="ds-deco-line ds-deco-line--left"></div>
+  </div>
+  <div class="ds-content-box__body" [ngClass]="{ 'ds-content-box__body--bg': bodyBg }">
+    <ng-content></ng-content>
+  </div>
+</div>

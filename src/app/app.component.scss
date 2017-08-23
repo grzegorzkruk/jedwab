@@ -4,11 +4,100 @@
     background: $bg-ds-header;
     box-shadow: $shadow-ds-header;
     display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-items: center;
     justify-content: space-between;
 }
 
-ds-logo,
-ds-navigation,
-ds-map-list{
+ds-content-box{
     display: inline-block;
+}
+
+section{
+    min-height: 500px;
+    color: white;
+    width: 100%;
+    margin: auto;
+    .parallax-img-wrapper{
+        z-index: 99 !important;
+    }
+}
+
+.text-header{
+    text-decoration: underline;
+}
+
+.ds-section-bg{
+    background-image: url("../assets/img/bg-gradient.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ds-background-container{
+    width: 100%;
+}
+
+.center{
+    text-align: center;
+}
+
+.container {
+    padding: 50px;
+}
+
+ds-content-box{
+    width: 100%;
+    padding: 20px;
+}
+
+.ds-contact{
+    position: relative;
+    height: 900px;
+    
+}
+
+.ds-contact-info{
+    &__head{
+        color: #a35e80;
+    }
+    &__label{
+        color: #a35e80;
+    }
+}
+
+
+
+.ds-map-container{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    background: rgba(64, 13, 38, 0.8);
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(64, 13, 38, 0.8);
+    }
+    ngui-map{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.ds-contact-container{
+    background: rgba(22, 22, 29, 0.9);
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    & .row{
+        background-image: url("../assets/img/map.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }

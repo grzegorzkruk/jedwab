@@ -1,5 +1,6 @@
-ngx-slick{
+.carousel{
     height: 90vh;
+    position: relative;
     .slide{
         height: 90vh;
         img{
@@ -8,8 +9,37 @@ ngx-slick{
             width: 100%;
         }
         .slide-content{
+            padding: 50px;
+            color: white;
+            background-image: url("../../assets/img/bg-header.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             height: 100%;
             width: 100%;
+        }
+    }
+}
+$carousel-button-size: 80px;
+.carousel-button{
+    position: relative;
+    width: $carousel-button-size;
+    height: $carousel-button-size;
+    border: none;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    outline: none;
+    &__container{
+        position: absolute;
+        z-index: 999;
+        top: 50%;
+        transform: translate(0, -50%);
+        
+        &--prev{
+            left: 10px;
+        }
+        &--next{
+            right: 10px;
         }
     }
 }

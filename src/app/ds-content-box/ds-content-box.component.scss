@@ -1,0 +1,36 @@
+.ds-content-box{
+    position: relative;
+    &__heading{
+        top: 18px;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        .ds-deco-line--right{
+            width: 50px;
+        }
+        .ds-deco-line--left{
+            width: 100%;
+        }
+    }
+    &__title{
+        margin: 0 30px;
+        color: white;
+        text-shadow: 0 1px 30px 29 rgba(64, 13, 38, 1);
+    }
+    &__body{
+        color: white;
+        padding: 30px 10px 10px 10px;
+        text-align: justify;
+        &--bg{
+            background: -webkit-linear-gradient(#23282f 27%, #0c0b10);
+            background: -o-linear-gradient(#23282f 27%, #0c0b10);
+            background: linear-gradient(#23282f 27%, #0c0b10);
+        }
+    }
+}
+
+.ds-deco-line{
+    height: 3px;
+    background: #82003a;
+}

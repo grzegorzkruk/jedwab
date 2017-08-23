@@ -3,20 +3,66 @@
   <ds-navigation class="clearfix"></ds-navigation>
   <ds-map-list></ds-map-list>
 </header>
-<section>
-  <ds-image-carousel></ds-image-carousel>
+
+
+<ds-image-carousel></ds-image-carousel>
+
+
+<section class="center">
+  <div class="container">
+    <h1 class="text-header">PRODUKTION</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis rerum impedit numquam nobis, accusantium sunt est explicabo voluptatibus, saepe eligendi soluta architecto officiis mollitia. Unde, cupiditate, ipsa. Totam, autem aspernatur?</p>
+  </div>
 </section>
-<section>
-  <h1>PRODUKTION</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis rerum impedit numquam nobis, accusantium sunt est explicabo voluptatibus, saepe eligendi soluta architecto officiis mollitia. Unde, cupiditate, ipsa. Totam, autem aspernatur?</p>
-</section>
-<section>
-  <div class="row">
-    <div class="col-6">
-      
+
+
+<section class="ds-section-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ds-content-box class="ds-content-box-bg" [bodyBg]="'true'" [title]="'Testowy'">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ipsa nostrum qui modi, magni tenetur assumenda veniam dolor, quam voluptates.</p>
+        </ds-content-box>
+      </div>
+      <div class="col-md-6">
+        <img src="http://placehold.it/500x500"/>
+      </div>
     </div>
-    <div class="col-6">
-      <img src="http://placehold.it/500x500"/>
+  </div>
+</section>
+
+
+
+<section class="ds-contact">
+  <div class="ds-map-container">
+    <ngui-map
+      zoom="15" 
+      center="Eschborn, Deautschland"
+      disableDefaultUI="true">
+    </ngui-map>
+  </div>
+  <div class="ds-contact-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="ds-contact-info__head">H.Y.W. Textil GmbH</h2>
+          <ul class="ds-contact-info">
+            <li class="ds-contact-info__item">
+              <div class="ds-contact-info__label">
+                <span class=""></span>
+                <h2>Adress</h2>
+              </div>
+              <ul class="ds-contact-info__content">
+                <li>Turm 133 - Kolnerstrasse, 1</li>
+                <li>D-65760 Eschborn, Deautschland</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ds-contact-form></ds-contact-form>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -8,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class ImageCarouselComponent implements OnInit {
 
   slides = [
-    {img: "http://placehold.it/350x150/000000"},
-    {img: "http://placehold.it/350x150/111111"},
-    {img: "http://placehold.it/350x350/333333"},
-    {img: "http://placehold.it/350x150/666666"}
+    {
+      img: "http://placehold.it/350x150/000000",
+      text: "Lorem Lorem"
+    },
+    {
+      img: "http://placehold.it/350x150/000000",
+      text: "Lorem Lorem 2"
+    },
   ];
   slideConfig = {
     "slidesToShow": 1, 
@@ -24,7 +28,10 @@ export class ImageCarouselComponent implements OnInit {
   };
  
   addSlide() {
-    this.slides.push({img: "http://placehold.it/350x150/777777"})
+    this.slides.push({
+      img: "http://placehold.it/350x150/777777",
+      text: ""
+    })
   }
  
   removeSlide() {
