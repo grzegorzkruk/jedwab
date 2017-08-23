@@ -19,9 +19,13 @@ section{
     color: white;
     width: 100%;
     margin: auto;
-    .parallax-img-wrapper{
-        z-index: 99 !important;
-    }
+}
+
+.ds-content-img{
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    background-repeat: no-repeat;
 }
 
 .text-header{
@@ -44,6 +48,7 @@ section{
 
 .container {
     padding: 50px;
+    position: relative;
 }
 
 ds-content-box{
@@ -53,16 +58,35 @@ ds-content-box{
 
 .ds-contact{
     position: relative;
-    height: 900px;
+    height: 1100px;
     
 }
 
 .ds-contact-info{
+    list-style: none;
+    padding: 0;
+    margin: 0;
     &__head{
         color: #a35e80;
     }
     &__label{
         color: #a35e80;
+        font-weight: bold;
+        font-size: 21px;
+        text-transform: uppercase;
+    }
+    &__title{
+        display: inline-block;
+        font-size: 25px;
+        margin-left: 10px;
+    }
+    &__content{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li{
+            margin-left: 30px;
+        }
     }
 }
 
@@ -73,7 +97,6 @@ ds-content-box{
     overflow: hidden;
     display: block;
     height: 100%;
-    background: rgba(64, 13, 38, 0.8);
     &::after{
         content: '';
         position: absolute;
@@ -81,7 +104,7 @@ ds-content-box{
         left: 0;
         bottom: 0;
         right: 0;
-        background: rgba(64, 13, 38, 0.8);
+        background: rgba(64, 13, 38, 0.6);
     }
     ngui-map{
         height: 100%;

@@ -1,5 +1,5 @@
 
-
+$dot-size: 5px;
 .ds-nav{
     height: 100px;
     &-list{
@@ -18,12 +18,16 @@
             &:not(:last-child)::after{
                 content: '';
                 display: inline-block;
-                width: 10px;
-                height: 10px;
+                width: $dot-size;
+                height: $dot-size;
                 background: red;
                 margin: 0 30px;
                 border-radius: 100%;
             }
+        }
+        &__link{
+            color: white;
+            text-decoration: none;
         }
     }
 }

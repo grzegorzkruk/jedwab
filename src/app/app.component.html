@@ -8,7 +8,14 @@
 <ds-image-carousel></ds-image-carousel>
 
 
-<section class="center">
+<section id="production" class="center">
+  <div class="container">
+    <h1 class="text-header">PRODUKTION</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis rerum impedit numquam nobis, accusantium sunt est explicabo voluptatibus, saepe eligendi soluta architecto officiis mollitia. Unde, cupiditate, ipsa. Totam, autem aspernatur?</p>
+  </div>
+</section>
+
+<section id="products" class="center">
   <div class="container">
     <h1 class="text-header">PRODUKTION</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis rerum impedit numquam nobis, accusantium sunt est explicabo voluptatibus, saepe eligendi soluta architecto officiis mollitia. Unde, cupiditate, ipsa. Totam, autem aspernatur?</p>
@@ -16,7 +23,7 @@
 </section>
 
 
-<section class="ds-section-bg">
+<section id="about" class="ds-section-bg">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -25,7 +32,8 @@
         </ds-content-box>
       </div>
       <div class="col-md-6">
-        <img src="http://placehold.it/500x500"/>
+        <div class="ds-content-img" style="background-image: url(http://placehold.it/500x500)">
+        </div>
       </div>
     </div>
   </div>
@@ -33,12 +41,14 @@
 
 
 
-<section class="ds-contact">
+<section id="contact" class="ds-contact">
   <div class="ds-map-container">
     <ngui-map
-      zoom="15" 
-      center="Eschborn, Deautschland"
+      style="height: 150%"
+      zoom="17" 
+      center="50.1293908,8.5713283"
       disableDefaultUI="true">
+      <marker [position]="{lat: 50.1326675, lng: 8.5713454}"></marker>
     </ngui-map>
   </div>
   <div class="ds-contact-container">
@@ -47,16 +57,72 @@
         <div class="col-md-6">
           <h2 class="ds-contact-info__head">H.Y.W. Textil GmbH</h2>
           <ul class="ds-contact-info">
+
+
             <li class="ds-contact-info__item">
               <div class="ds-contact-info__label">
-                <span class=""></span>
-                <h2>Adress</h2>
+                <span class="glyphicon glyphicon-map-marker"></span>
+                <h2 class="ds-contact-info__title">Adress</h2>
               </div>
               <ul class="ds-contact-info__content">
                 <li>Turm 133 - Kolnerstrasse, 1</li>
                 <li>D-65760 Eschborn, Deautschland</li>
               </ul>
             </li>
+
+            <li class="ds-contact-info__item">
+              <div class="ds-contact-info__label">
+                <span class="glyphicon glyphicon-earphone"></span>
+                <h2 class="ds-contact-info__title">Telefon</h2>
+              </div>
+              <ul class="ds-contact-info__content">
+                <li>0049 (0) 6196 9698373</li>
+                <li>0049 (0) 6196 9985768</li>
+              </ul>
+            </li>
+
+            <li class="ds-contact-info__item">
+              <div class="ds-contact-info__label">
+                <span class="glyphicon glyphicon-print"></span>
+                <h2 class="ds-contact-info__title">Fax</h2>
+              </div>
+              <ul class="ds-contact-info__content">
+                <li>0049 (0) 6196 9984889</li>
+              </ul>
+            </li>
+
+            <li class="ds-contact-info__item">
+              <div class="ds-contact-info__label">
+                <span class="glyphicon glyphicon-phone"></span>
+                <h2 class="ds-contact-info__title">Mobil</h2>
+              </div>
+              <ul class="ds-contact-info__content">
+                <li>0049 (0) 152 223 355 75</li>
+              </ul>
+            </li>
+
+            <li class="ds-contact-info__item">
+              <div class="ds-contact-info__label">
+                <span class="glyphicon glyphicon-envelope"></span>
+                <h2 class="ds-contact-info__title">Email</h2>
+              </div>
+              <ul class="ds-contact-info__content">
+                <li>info@drachenseide.com</li>
+              </ul>
+            </li>
+
+            <li class="ds-contact-info__item">
+              <div class="ds-contact-info__label">
+                <span class="glyphicon glyphicon-time"></span>
+                <h2 class="ds-contact-info__title">Offnungszeiten</h2>
+              </div>
+              <ul class="ds-contact-info__content">
+                <li>Montag - Freitag: 09h - 17h</li>
+                <li>Samstag - Sontag: Geschlossen</li>
+              </ul>
+            </li>
+
+
           </ul>
         </div>
         <div class="col-md-6">

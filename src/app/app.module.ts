@@ -11,6 +11,7 @@ import { MapListComponent } from './map-list/map-list.component';
 import { DsContentBoxComponent } from './ds-content-box/ds-content-box.component';
 import { DsContactFormComponent } from './ds-contact-form/ds-contact-form.component';
 import { NguiMapModule } from '@ngui/map';
+import { Parallax, ParallaxConfig } from 'ngx-parallax';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NguiMapModule } from '@ngui/map';
     ImageCarouselComponent,
     MapListComponent,
     DsContentBoxComponent,
-    DsContactFormComponent
+    DsContactFormComponent,
+    Parallax
   ],
   imports: [
     BrowserModule,
