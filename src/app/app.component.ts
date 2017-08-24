@@ -1,4 +1,5 @@
-import { Component, ElementRef, AfterViewInit, HostListener } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, HostListener, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
 
 import { AppSettings } from './app.settings';
 
@@ -17,11 +18,12 @@ export class AppComponent implements AfterViewInit {
     "dots": false,
     "fade": false
   }
+  isStick: boolean = false;
 
-  constructor(private el:ElementRef){}
+  constructor(private el:ElementRef,  @Inject(DOCUMENT) private oDoc: Document){}
 
   ngAfterViewInit() {
-    console.log(this.el.nativeElement);
+    console.log();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -34,6 +36,22 @@ export class AppComponent implements AfterViewInit {
     } else {
       this.slideConfig.slidesToShow = 4;
     }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event) {
+    console.log(event);
+    let number = this.oDoc.body.scrollTop;
+    if (number > 1) {
+      this.isStick = true;
+    } else {
+      this.isStick = false;
+    }
+  }
+
+  onMenuClick(e){
+    e.preventDefault();
+    console.log(e);
     
   }
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
 import { AppSettings } from './../app.settings';
 
 @Component({
@@ -11,7 +12,7 @@ export class NavigationComponent implements OnInit {
 
   publicPath = AppSettings.PUBLIC_PATH;
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private oDoc: Document) { }
 
   ngOnInit() {
   }
@@ -22,6 +23,14 @@ export class NavigationComponent implements OnInit {
   
   closeMenu(){
     this.menuOpen = false;
+  }
+
+  onMenuClick(e){
+    let section = this.oDoc.querySelector(e.srcElement.hash.toString());
+    console.log(section);
+    let offset = section.offsetTop;
+    console.log(offset);
+    this.closeMenu();
   }
 
 }

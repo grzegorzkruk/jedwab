@@ -2,7 +2,7 @@
     height: 90vh;
     position: relative;
     .slide{
-        height: 90vh;
+        height: 60vh;
         img{
             object-fit: cover;
             height: 100%;
@@ -21,6 +21,7 @@
     }
 }
 $carousel-button-size: 80px;
+$carousel-button-size-mobile: 40px;
 .carousel-button{
     position: relative;
     width: $carousel-button-size;
@@ -38,7 +39,7 @@ $carousel-button-size: 80px;
     &__container{
         position: absolute;
         z-index: 999;
-        top: 50%;
+        top: 25%;
         transform: translate(0, -50%);
         
         &--prev{
@@ -46,6 +47,50 @@ $carousel-button-size: 80px;
         }
         &--next{
             right: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .carousel-button{
+        position: relative;
+        width: $carousel-button-size-mobile;
+        height: $carousel-button-size-mobile;
+        font-size: 15px;
+        &__container{
+            position: absolute;
+            z-index: 999;
+            top: 50%;
+            transform: translate(0, -50%);
+            
+            &--prev{
+                left: 10px;
+            }
+            &--next{
+                right: 10px;
+            }
+        }
+    }
+    .carousel{
+        height: 100%;
+        position: relative;
+        .slide{
+            height: 90vh;
+            img{
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+            .slide-content{
+                padding: 50px;
+                color: white;
+                background-image: url("../../assets/img/bg-header.png");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 100%;
+                width: 100%;
+            }
         }
     }
 }

@@ -38,6 +38,18 @@ p{
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+    &.stick{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+}
+
+.ds-body{
+    &--margin{
+        margin-top: 100px;
+    }
 }
 
 ds-logo{
@@ -185,5 +197,69 @@ ds-content-box{
         background-image: url("assets/img/map.png");
         background-size: contain;
         background-repeat: no-repeat;
+    }
+}
+
+.ds-image-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    img{
+        max-height: 100px;
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 768px){
+    ds-content-box{
+        padding: 0;
+    }
+
+    .col-md-6{
+        padding: 0;
+    }
+    .ds-map-container{
+        position: relative;
+        overflow: hidden;
+        display: block;
+        height: 35%;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(64, 13, 38, 0.6);
+        }
+        ngui-map{
+            height: 100% !important;
+            width: 100%;
+        }
+    }
+    .ds-contact-container{
+        background: rgba(22, 22, 29, 0.9);
+        position: relative;
+        bottom: 0;
+        z-index: 999;
+        width: 100%;
+        & .row{
+            background-image: url("assets/img/map.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .ds-image-gallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        img{
+            height: auto;
+            width: 100%;
+            margin: 5px 0;
+        }
     }
 }

@@ -1,163 +1,166 @@
-<header class="ds-header">
+<header class="ds-header" [ngClass]="{'stick': isStick}">
   <ds-logo></ds-logo>
   <ds-navigation class="clearfix"></ds-navigation>
   <ds-map-list></ds-map-list>
 </header>
 
-
-<ds-image-carousel></ds-image-carousel>
-
-
-<section id="production" class="center">
-  <div class="container">
-    <h1 class="text-header">PRODUKTION</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis rerum impedit numquam nobis, accusantium sunt est explicabo voluptatibus, saepe eligendi soluta architecto officiis mollitia. Unde, cupiditate, ipsa. Totam, autem aspernatur?</p>
-    <div class="col-md-12 center ds-content-img-container">
-        <div class="ds-image-gallery">
-          <img *ngFor="let production of productions" src="{{ production.img }}">
-        </div>
-      </div>
-  </div>
-</section>
-
-<section id="products" class="ds-section-bg">
-  <div class="container">
-    <div class="row ds-content-centered">
-      <div class="col-md-6">
-        <ds-content-box class="ds-content-box-bg" [bodyBg]="'true'" [title]="'PRODUKTE'">
-          <p>
-            Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. 
-            Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. Proin iaculis purus digni consequat sem digni ssim. Proin iaculis purus digni consequat sem digni ssim. Lorem ipsum et todore Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. 
-            mProin iaculis purus digni consequat sem digni ssim. Proin iaculis purus digni consequat sem digni ssim. Lorem ipsum et todore 
-          </p>
-        </ds-content-box>
-      </div>
-      <div class="col-md-6 center ds-content-img-container">
-        <div class="ds-content-img" style="background-image: url(/assets/img/product-main.png)">
-        </div>
-      </div>
-    </div>
-
-    <ngx-slick class="carousel center" #slickModal="slick-modal" [config]="slideConfig">
-        <div ngxSlickItem *ngFor="let product of products" class="slide" style="outline: none">
-              <img src="{{ product.img }}" alt="" width="100%">
-        </div>
-    </ngx-slick>
-  </div>
-</section>
+<div class="ds-body" [ngClass]="{'ds-body--margin': isStick}">
 
 
-<section id="about" class="ds-section-bg" style="background-image: url(/assets/img/bg-gradient.png)">
-  <div class="container">
-    <div class="row ds-content-centered">
-      <div class="col-md-6">
-        <ds-content-box class="ds-content-box-bg" [bodyBg]="'true'" [title]="'Über H.Y.W'">
-          <p>
-            2003 gründete Yin Wang im Mode-Centrum Eschborn den Handel mit Seiden und Kaschmirschals, auch im Import/Export. Im Laufe der Zeit wurde der Bereich um Perlen-Echtschmuck ergänzt.  
-          </p>
-          <p>
-            2017 wurde nun der Produktbereich Export/Import mit hochwertigen Seidenstoffen, mit hervorragenden Wasch- u. Trageeigenschaften in allen jeweils gewünschten Saisonfarben und Breiten erweitert.  In unserem Büro in Eschborn können Sie die Muster testen oder bestellen.
-          </p>
-        </ds-content-box>
-      </div>
-      <div class="col-md-6 center ds-content-img-container">
-        <div class="ds-content-img" style="background-image: url(/assets/img/FrauWang.png)">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <ds-image-carousel></ds-image-carousel>
 
 
-
-<section id="contact" class="ds-contact">
-  <div class="ds-map-container">
-    <ngui-map
-      style="height: 150%"
-      zoom="17" 
-      center="50.1283729,8.5713283"
-      disableDefaultUI="true">
-      <marker [position]="{lat: 50.1326675, lng: 8.5713454}"></marker>
-    </ngui-map>
-  </div>
-  <div class="ds-contact-container">
+  <section id="production" class="center">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h2 class="ds-contact-info__head">H.Y.W. Textil GmbH</h2>
-          <ul class="ds-contact-info">
-
-
-            <li class="ds-contact-info__item">
-              <div class="ds-contact-info__label">
-                <span class="glyphicon glyphicon-map-marker"></span>
-                <h2 class="ds-contact-info__title">Adress</h2>
-              </div>
-              <ul class="ds-contact-info__content">
-                <li>Turm 133 - Kolnerstrasse, 1</li>
-                <li>D-65760 Eschborn, Deautschland</li>
-              </ul>
-            </li>
-
-            <li class="ds-contact-info__item">
-              <div class="ds-contact-info__label">
-                <span class="glyphicon glyphicon-earphone"></span>
-                <h2 class="ds-contact-info__title">Telefon</h2>
-              </div>
-              <ul class="ds-contact-info__content">
-                <li>0049 (0) 6196 9698373</li>
-                <li>0049 (0) 6196 9985768</li>
-              </ul>
-            </li>
-
-            <li class="ds-contact-info__item">
-              <div class="ds-contact-info__label">
-                <span class="glyphicon glyphicon-print"></span>
-                <h2 class="ds-contact-info__title">Fax</h2>
-              </div>
-              <ul class="ds-contact-info__content">
-                <li>0049 (0) 6196 9984889</li>
-              </ul>
-            </li>
-
-            <li class="ds-contact-info__item">
-              <div class="ds-contact-info__label">
-                <span class="glyphicon glyphicon-phone"></span>
-                <h2 class="ds-contact-info__title">Mobil</h2>
-              </div>
-              <ul class="ds-contact-info__content">
-                <li>0049 (0) 152 223 355 75</li>
-              </ul>
-            </li>
-
-            <li class="ds-contact-info__item">
-              <div class="ds-contact-info__label">
-                <span class="glyphicon glyphicon-envelope"></span>
-                <h2 class="ds-contact-info__title">Email</h2>
-              </div>
-              <ul class="ds-contact-info__content">
-                <li>info@drachenseide.com</li>
-              </ul>
-            </li>
-
-            <li class="ds-contact-info__item">
-              <div class="ds-contact-info__label">
-                <span class="glyphicon glyphicon-time"></span>
-                <h2 class="ds-contact-info__title">Offnungszeiten</h2>
-              </div>
-              <ul class="ds-contact-info__content">
-                <li>Montag - Freitag: 09h - 17h</li>
-                <li>Samstag - Sontag: Geschlossen</li>
-              </ul>
-            </li>
-
-
-          </ul>
+      <h1 class="text-header">PRODUKTION</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis rerum impedit numquam nobis, accusantium sunt est explicabo voluptatibus, saepe eligendi soluta architecto officiis mollitia. Unde, cupiditate, ipsa. Totam, autem aspernatur?</p>
+      <div class="col-md-12 center ds-content-img-container">
+          <div class="ds-image-gallery">
+            <img *ngFor="let production of productions" src="{{ production.img }}">
+          </div>
         </div>
+    </div>
+  </section>
+
+  <section id="products" class="ds-section-bg">
+    <div class="container">
+      <div class="row ds-content-centered">
         <div class="col-md-6">
-          <ds-contact-form></ds-contact-form>
+          <ds-content-box class="ds-content-box-bg" [bodyBg]="'true'" [title]="'PRODUKTE'">
+            <p>
+              Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. 
+              Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. Proin iaculis purus digni consequat sem digni ssim. Proin iaculis purus digni consequat sem digni ssim. Lorem ipsum et todore Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. 
+              mProin iaculis purus digni consequat sem digni ssim. Proin iaculis purus digni consequat sem digni ssim. Lorem ipsum et todore 
+            </p>
+          </ds-content-box>
+        </div>
+        <div class="col-md-6 center ds-content-img-container">
+          <div class="ds-content-img" style="background-image: url(/assets/img/product-main.png)">
+          </div>
+        </div>
+      </div>
+
+      <ngx-slick class="carousel center" #slickModal="slick-modal" [config]="slideConfig">
+          <div ngxSlickItem *ngFor="let product of products" class="slide" style="outline: none">
+                <img src="{{ product.img }}" alt="" width="100%">
+          </div>
+      </ngx-slick>
+    </div>
+  </section>
+
+
+  <section id="about" class="ds-section-bg" style="background-image: url(/assets/img/bg-gradient.png)">
+    <div class="container">
+      <div class="row ds-content-centered">
+        <div class="col-md-6">
+          <ds-content-box class="ds-content-box-bg" [bodyBg]="'true'" [title]="'Über H.Y.W'">
+            <p>
+              2003 gründete Yin Wang im Mode-Centrum Eschborn den Handel mit Seiden und Kaschmirschals, auch im Import/Export. Im Laufe der Zeit wurde der Bereich um Perlen-Echtschmuck ergänzt.  
+            </p>
+            <p>
+              2017 wurde nun der Produktbereich Export/Import mit hochwertigen Seidenstoffen, mit hervorragenden Wasch- u. Trageeigenschaften in allen jeweils gewünschten Saisonfarben und Breiten erweitert.  In unserem Büro in Eschborn können Sie die Muster testen oder bestellen.
+            </p>
+          </ds-content-box>
+        </div>
+        <div class="col-md-6 center ds-content-img-container">
+          <div class="ds-content-img" style="background-image: url(/assets/img/FrauWang.png)">
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+
+
+  <section id="contact" class="ds-contact">
+    <div class="ds-map-container">
+      <ngui-map
+        style="height: 150%"
+        zoom="17" 
+        center="50.1283729,8.5713283"
+        disableDefaultUI="true">
+        <marker [position]="{lat: 50.1326675, lng: 8.5713454}"></marker>
+      </ngui-map>
+    </div>
+    <div class="ds-contact-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="ds-contact-info__head">H.Y.W. Textil GmbH</h2>
+            <ul class="ds-contact-info">
+
+
+              <li class="ds-contact-info__item">
+                <div class="ds-contact-info__label">
+                  <span class="glyphicon glyphicon-map-marker"></span>
+                  <h2 class="ds-contact-info__title">Adress</h2>
+                </div>
+                <ul class="ds-contact-info__content">
+                  <li>Turm 133 - Kolnerstrasse, 1</li>
+                  <li>D-65760 Eschborn, Deautschland</li>
+                </ul>
+              </li>
+
+              <li class="ds-contact-info__item">
+                <div class="ds-contact-info__label">
+                  <span class="glyphicon glyphicon-earphone"></span>
+                  <h2 class="ds-contact-info__title">Telefon</h2>
+                </div>
+                <ul class="ds-contact-info__content">
+                  <li>0049 (0) 6196 9698373</li>
+                  <li>0049 (0) 6196 9985768</li>
+                </ul>
+              </li>
+
+              <li class="ds-contact-info__item">
+                <div class="ds-contact-info__label">
+                  <span class="glyphicon glyphicon-print"></span>
+                  <h2 class="ds-contact-info__title">Fax</h2>
+                </div>
+                <ul class="ds-contact-info__content">
+                  <li>0049 (0) 6196 9984889</li>
+                </ul>
+              </li>
+
+              <li class="ds-contact-info__item">
+                <div class="ds-contact-info__label">
+                  <span class="glyphicon glyphicon-phone"></span>
+                  <h2 class="ds-contact-info__title">Mobil</h2>
+                </div>
+                <ul class="ds-contact-info__content">
+                  <li>0049 (0) 152 223 355 75</li>
+                </ul>
+              </li>
+
+              <li class="ds-contact-info__item">
+                <div class="ds-contact-info__label">
+                  <span class="glyphicon glyphicon-envelope"></span>
+                  <h2 class="ds-contact-info__title">Email</h2>
+                </div>
+                <ul class="ds-contact-info__content">
+                  <li>info@drachenseide.com</li>
+                </ul>
+              </li>
+
+              <li class="ds-contact-info__item">
+                <div class="ds-contact-info__label">
+                  <span class="glyphicon glyphicon-time"></span>
+                  <h2 class="ds-contact-info__title">Offnungszeiten</h2>
+                </div>
+                <ul class="ds-contact-info__content">
+                  <li>Montag - Freitag: 09h - 17h</li>
+                  <li>Samstag - Sontag: Geschlossen</li>
+                </ul>
+              </li>
+
+
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ds-contact-form></ds-contact-form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

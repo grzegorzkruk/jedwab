@@ -35,3 +35,39 @@
     height: 3px;
     background: #82003a;
 }
+
+@media screen and (max-width: 768px){
+    .ds-content-box{
+        position: relative;
+        &__heading{
+            top: 18px;
+            position: relative;
+            flex-wrap: nowrap;
+            align-items: center;
+            text-align: center;
+            .ds-deco-line--right{
+                width: 0;
+            }
+            .ds-deco-line--left{
+                width: 0;
+            }
+        }
+        &__title{
+            width: 100%;
+            margin: 0 30px;
+            color: white;
+            font-size: 15px;
+        }
+        &__body{
+            color: white;
+            font-size: 13px;
+            padding: 30px 0 0 0;
+            text-align: justify;
+            &--bg{
+                background: -webkit-linear-gradient(#23282f 27%, #0c0b10);
+                background: -o-linear-gradient(#23282f 27%, #0c0b10);
+                background: linear-gradient(#23282f 27%, #0c0b10);
+            }
+        }
+    }
+}
