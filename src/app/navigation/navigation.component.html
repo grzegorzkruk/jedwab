@@ -1,10 +1,10 @@
 <nav class="ds-nav" [ngClass]="{'is-open': menuOpen}">
   <ul class="ds-nav-list">
-    <li class="ds-nav-list__item" (click)="onMenuClick($event)"><a href="textil/#" class="ds-nav-list__link">Home</a></li>
-    <li class="ds-nav-list__item" (click)="onMenuClick($event)"><a href="textil/#production" class="ds-nav-list__link">Produktion</a></li>
-    <li class="ds-nav-list__item" (click)="onMenuClick($event)"><a href="textil/#products" class="ds-nav-list__link">Produkte</a></li>
-    <li class="ds-nav-list__item" (click)="onMenuClick($event)"><a href="textil/#about" class="ds-nav-list__link">Über uns</a></li>
-    <li class="ds-nav-list__item" (click)="onMenuClick($event)"><a href="textil/#contact" class="ds-nav-list__link">Kontakt</a></li>
+    <li class="ds-nav-list__item" (click)="closeMenu()"><a scrollTo scrollTargetSelector="#top" class="ds-nav-list__link">Home</a></li>
+    <li class="ds-nav-list__item" (click)="closeMenu()"><a scrollTo scrollTargetSelector="#production" class="ds-nav-list__link">Produktion</a></li>
+    <li class="ds-nav-list__item" (click)="closeMenu()"><a scrollTo scrollTargetSelector="#products" class="ds-nav-list__link">Produkte</a></li>
+    <li class="ds-nav-list__item" (click)="closeMenu()"><a scrollTo scrollTargetSelector="#about" class="ds-nav-list__link">Über uns</a></li>
+    <li class="ds-nav-list__item" (click)="closeMenu()"><a scrollTo scrollTargetSelector="#contact" class="ds-nav-list__link">Kontakt</a></li>
   </ul>
 </nav>
 <div class="an-btn-burger-container">

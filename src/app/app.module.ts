@@ -13,6 +13,7 @@ import { DsContactFormComponent } from './ds-contact-form/ds-contact-form.compon
 import { NguiMapModule } from '@ngui/map';
 import { Parallax, ParallaxConfig } from 'ngx-parallax';
 import { BtnBurgerComponent } from './btn-burger/btn-burger.component';
+import {ScrollToModule} from 'ng2-scroll-to';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BtnBurgerComponent } from './btn-burger/btn-burger.component';
   imports: [
     BrowserModule,
     SlickModule.forRoot(),
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyD7F1DLtiFxFWSHvpkul-6RtdrsJ-LiIdI'})
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyD7F1DLtiFxFWSHvpkul-6RtdrsJ-LiIdI'}),
+    ScrollToModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
