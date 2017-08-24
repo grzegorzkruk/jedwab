@@ -11,6 +11,207 @@ import { AppSettings } from './app.settings';
 export class AppComponent implements AfterViewInit {
   publicPath = AppSettings.PUBLIC_PATH;
 
+  mapOptions={
+    center: {lat: 50.1283729, lng: 8.5713283},
+    zoom: 17,
+    disableDefaultUI: true,
+    styles: [
+      {
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#f5f5f5"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#616161"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "color": "#f5f5f5"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#bdbdbd"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.neighborhood",
+        "stylers": [
+          {
+            "visibility": "on"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#eeeeee"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.text",
+        "stylers": [
+          {
+            "visibility": "on"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#757575"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#e5e5e5"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#ffffff"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+          {
+            "visibility": "on"
+          }
+        ]
+      },
+      {
+        "featureType": "road.arterial",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#757575"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#dadada"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#616161"
+          }
+        ]
+      },
+      {
+        "featureType": "road.local",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.line",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#e5e5e5"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.station",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#eeeeee"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#c9c9c9"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "labels.text",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      }
+    ]
+  }
+
   slideConfig={
     "slidesToShow": 4,
     "slidesToScroll": 1,
@@ -20,7 +221,19 @@ export class AppComponent implements AfterViewInit {
   }
   isStick: boolean = false;
 
-  constructor(private el:ElementRef,  @Inject(DOCUMENT) private oDoc: Document){}
+  constructor(private el:ElementRef,  @Inject(DOCUMENT) private oDoc: Document){
+    console.log(this.oDoc.body.clientWidth);
+    if (768 > this.oDoc.body.clientWidth){
+      this.slideConfig.slidesToShow = 1;
+      this.mapOptions.center = {lat: 50.1326675, lng: 8.5713454};
+    } else if(1000 > this.oDoc.body.clientWidth && 768 < this.oDoc.body.clientWidth) {
+      this.slideConfig.slidesToShow = 3;
+      this.mapOptions.center = {lat: 50.1283729, lng: 8.5713283};
+    } else {
+      this.slideConfig.slidesToShow = 4;
+      this.mapOptions.center = {lat: 50.1283729, lng: 8.5713283};
+    }
+  }
 
   ngAfterViewInit() {
     console.log();
@@ -29,13 +242,15 @@ export class AppComponent implements AfterViewInit {
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     event.target.innerWidth; 
-    console.log(event.target.innerWidth);
-    if (768 > event.target.innerWidth){
+    console.log(this.oDoc.body.clientWidth);
+    if (768 > this.oDoc.body.clientWidth){
       this.slideConfig.slidesToShow = 1;
-      console.log(this.slideConfig.slidesToShow)
+      this.mapOptions.center = {lat: 50.1283729, lng: 8.5713283};
     } else {
       this.slideConfig.slidesToShow = 4;
+      this.mapOptions.center = {lat: 50.1326675, lng: 8.5713454};
     }
+    console.log(this.mapOptions.center);
   }
 
   @HostListener('window:scroll', ['$event'])
