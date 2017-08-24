@@ -12,6 +12,7 @@ import { DsContentBoxComponent } from './ds-content-box/ds-content-box.component
 import { DsContactFormComponent } from './ds-contact-form/ds-contact-form.component';
 import { NguiMapModule } from '@ngui/map';
 import { Parallax, ParallaxConfig } from 'ngx-parallax';
+import { BtnBurgerComponent } from './btn-burger/btn-burger.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { Parallax, ParallaxConfig } from 'ngx-parallax';
     MapListComponent,
     DsContentBoxComponent,
     DsContactFormComponent,
-    Parallax
+    Parallax,
+    BtnBurgerComponent
   ],
   imports: [
     BrowserModule,

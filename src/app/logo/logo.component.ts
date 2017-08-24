@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppSettings } from './../app.settings';
 
 @Component({
   selector: 'ds-logo',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent implements OnInit {
+
+  publicPath = AppSettings.PUBLIC_PATH;
 
   constructor() { }
 

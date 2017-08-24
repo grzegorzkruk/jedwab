@@ -1,0 +1,66 @@
+@media screen and (min-width: 768px){
+    .an-btn-burger{
+        display: none;
+    }
+}
+
+.an-btn-burger{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
+
+.an-btn-burger-top,
+.an-btn-burger-meat,
+.an-btn-burger-bottom{
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: white;
+    transition: all 0.3s;
+}
+
+.an-btn-burger-top{
+    top: 5px;
+}
+
+.an-btn-burger-meat{
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.an-btn-burger-bottom{
+    bottom: 5px;
+}
+
+.an-btn-burger:hover > .an-btn-burger-meat{
+    width: 90%;
+}
+
+.an-btn-burger:hover > .an-btn-burger-top,
+.an-btn-burger:hover > .an-btn-burger-bottom{
+    width: 110%;
+}
+
+/***** Toggled ******/
+
+.toggled .an-btn-burger-top{
+    top: 50%;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.toggled .an-btn-burger-meat{
+    opacity: 0;
+}
+
+.toggled .an-btn-burger-bottom{
+    top: 50%;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}

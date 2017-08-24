@@ -1,0 +1,189 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/bootstrap-sass/variables";
+@import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
+
+@import "variables";
+
+@font-face{
+    font-family: Butler;
+    src: url('assets/fonts/Butler_font/Butler/Butler_Medium.otf'),
+    url('assets/fonts/Butler_font/Butler_Webfont/butler_medium-webfont.woff') format('woff'), /* Modern Browsers */
+}
+
+
+.clearfix{
+    &::after,&::before{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+body{
+    font-family: Butler !important;
+    background: #0b0b10;
+    position: relative;
+    font-family: url;
+}
+
+p{
+    font-size: 16px;
+}
+
+.ds-header{
+    width: 100%;
+    background: $bg-ds-header;
+    box-shadow: $shadow-ds-header;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ds-logo{
+    width: 200px;
+}
+
+ds-content-box{
+    display: inline-block;
+}
+
+section{
+    min-height: 500px;
+    color: white;
+    width: 100%;
+    margin: auto;
+}
+
+.ds-content-img{
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    background-repeat: no-repeat;
+    &-container{
+        height: 100%;
+    }
+}
+
+.bg-img-cover{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-img-contain{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ds-content-centered{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.text-header{
+    text-decoration: underline;
+}
+
+.ds-section-bg{
+    background-image: url("assets/img/bg-gradient.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ds-background-container{
+    width: 100%;
+}
+
+.center{
+    text-align: center;
+}
+
+.container {
+    padding: 50px;
+    position: relative;
+}
+
+ds-content-box{
+    width: 100%;
+    padding: 20px;
+}
+
+.ds-contact{
+    position: relative;
+    height: 1100px;
+    
+}
+
+.ds-contact-info{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &__head{
+        color: #a35e80;
+    }
+    &__label{
+        color: #a35e80;
+        font-weight: bold;
+        font-size: 21px;
+        text-transform: uppercase;
+    }
+    &__title{
+        display: inline-block;
+        font-size: 25px;
+        margin-left: 10px;
+    }
+    &__content{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li{
+            margin-left: 30px;
+        }
+    }
+}
+
+
+
+.ds-map-container{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(64, 13, 38, 0.6);
+    }
+    ngui-map{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.ds-contact-container{
+    background: rgba(22, 22, 29, 0.9);
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    & .row{
+        background-image: url("assets/img/map.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

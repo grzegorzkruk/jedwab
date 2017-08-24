@@ -1,10 +1,12 @@
 <div class="map-list-container">
   <div class="map-list" (click)="toggleList()">
-    <div class="map-item"></div>
+    <div class="map-item bg-img-contain" 
+    style="background-image: url(/assets/flags/germany.png)"
+    [ngStyle]="{'background-image': 'url(' + publicPath + languages[0].map + ')'}"></div>
     <div class="map-expand-list" [ngClass]="{'open': isOpen}">
-      <div class="map-expand-list-item"></div>
-      <div class="map-expand-list-item"></div>
-      <div class="map-expand-list-item"></div>
+      <div class="map-expand-list-item bg-img-contain"
+        *ngFor="let language of languages"
+        [ngStyle]="{'background-image': 'url(' + publicPath + language.map + ')'}"></div>
     </div>
   </div>
 </div>

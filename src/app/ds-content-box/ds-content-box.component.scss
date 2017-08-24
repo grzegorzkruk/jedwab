@@ -16,11 +16,12 @@
     &__title{
         margin: 0 30px;
         color: white;
-        text-shadow: 0 1px 30px 29 rgba(64, 13, 38, 1);
+        white-space: nowrap;
+        text-shadow: 0 1px 30px rgba(64, 13, 38, 1);
     }
     &__body{
         color: white;
-        padding: 30px 10px 10px 10px;
+        padding: 30px 20px 20px 20px;
         text-align: justify;
         &--bg{
             background: -webkit-linear-gradient(#23282f 27%, #0c0b10);

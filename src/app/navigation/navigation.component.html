@@ -1,9 +1,12 @@
-<nav class="ds-nav">
+<nav class="ds-nav" [ngClass]="{'is-open': menuOpen}">
   <ul class="ds-nav-list">
-    <li class="ds-nav-list__item"><a href="#" class="ds-nav-list__link">Home</a></li>
-    <li class="ds-nav-list__item"><a href="#production" class="ds-nav-list__link">Produktion</a></li>
-    <li class="ds-nav-list__item"><a href="#products" class="ds-nav-list__link">Produkte</a></li>
-    <li class="ds-nav-list__item"><a href="#about" class="ds-nav-list__link">Über uns</a></li>
-    <li class="ds-nav-list__item"><a href="#contact" class="ds-nav-list__link">Kontakt</a></li>
+    <li class="ds-nav-list__item" (click)="closeMenu()"><a href="#" class="ds-nav-list__link">Home</a></li>
+    <li class="ds-nav-list__item" (click)="closeMenu()"><a href="#production" class="ds-nav-list__link">Produktion</a></li>
+    <li class="ds-nav-list__item" (click)="closeMenu()"><a href="#products" class="ds-nav-list__link">Produkte</a></li>
+    <li class="ds-nav-list__item" (click)="closeMenu()"><a href="#about" class="ds-nav-list__link">Über uns</a></li>
+    <li class="ds-nav-list__item" (click)="closeMenu()"><a href="#contact" class="ds-nav-list__link">Kontakt</a></li>
   </ul>
 </nav>
+<div class="an-btn-burger-container">
+  <btn-burger [toggled]="menuOpen" (click)="toggleMenu()"></btn-burger>
+</div>

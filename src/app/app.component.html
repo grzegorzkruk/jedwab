@@ -12,27 +12,56 @@
   <div class="container">
     <h1 class="text-header">PRODUKTION</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis rerum impedit numquam nobis, accusantium sunt est explicabo voluptatibus, saepe eligendi soluta architecto officiis mollitia. Unde, cupiditate, ipsa. Totam, autem aspernatur?</p>
+    <div class="col-md-12 center ds-content-img-container">
+        <div class="ds-image-gallery">
+          <img *ngFor="let production of productions" src="{{ production.img }}">
+        </div>
+      </div>
   </div>
 </section>
 
-<section id="products" class="center">
+<section id="products" class="ds-section-bg">
   <div class="container">
-    <h1 class="text-header">PRODUKTION</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis rerum impedit numquam nobis, accusantium sunt est explicabo voluptatibus, saepe eligendi soluta architecto officiis mollitia. Unde, cupiditate, ipsa. Totam, autem aspernatur?</p>
-  </div>
-</section>
-
-
-<section id="about" class="ds-section-bg">
-  <div class="container">
-    <div class="row">
+    <div class="row ds-content-centered">
       <div class="col-md-6">
-        <ds-content-box class="ds-content-box-bg" [bodyBg]="'true'" [title]="'Testowy'">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ipsa nostrum qui modi, magni tenetur assumenda veniam dolor, quam voluptates.</p>
+        <ds-content-box class="ds-content-box-bg" [bodyBg]="'true'" [title]="'PRODUKTE'">
+          <p>
+            Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. 
+            Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. Proin iaculis purus digni consequat sem digni ssim. Proin iaculis purus digni consequat sem digni ssim. Lorem ipsum et todore Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. 
+            mProin iaculis purus digni consequat sem digni ssim. Proin iaculis purus digni consequat sem digni ssim. Lorem ipsum et todore 
+          </p>
         </ds-content-box>
       </div>
+      <div class="col-md-6 center ds-content-img-container">
+        <div class="ds-content-img" style="background-image: url(/assets/img/product-main.png)">
+        </div>
+      </div>
+    </div>
+
+    <ngx-slick class="carousel center" #slickModal="slick-modal" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let product of products" class="slide" style="outline: none">
+              <img src="{{ product.img }}" alt="" width="100%">
+        </div>
+    </ngx-slick>
+  </div>
+</section>
+
+
+<section id="about" class="ds-section-bg" style="background-image: url(/assets/img/bg-gradient.png)">
+  <div class="container">
+    <div class="row ds-content-centered">
       <div class="col-md-6">
-        <div class="ds-content-img" style="background-image: url(http://placehold.it/500x500)">
+        <ds-content-box class="ds-content-box-bg" [bodyBg]="'true'" [title]="'Über H.Y.W'">
+          <p>
+            2003 gründete Yin Wang im Mode-Centrum Eschborn den Handel mit Seiden und Kaschmirschals, auch im Import/Export. Im Laufe der Zeit wurde der Bereich um Perlen-Echtschmuck ergänzt.  
+          </p>
+          <p>
+            2017 wurde nun der Produktbereich Export/Import mit hochwertigen Seidenstoffen, mit hervorragenden Wasch- u. Trageeigenschaften in allen jeweils gewünschten Saisonfarben und Breiten erweitert.  In unserem Büro in Eschborn können Sie die Muster testen oder bestellen.
+          </p>
+        </ds-content-box>
+      </div>
+      <div class="col-md-6 center ds-content-img-container">
+        <div class="ds-content-img" style="background-image: url(/assets/img/FrauWang.png)">
         </div>
       </div>
     </div>
@@ -46,7 +75,7 @@
     <ngui-map
       style="height: 150%"
       zoom="17" 
-      center="50.1293908,8.5713283"
+      center="50.1283729,8.5713283"
       disableDefaultUI="true">
       <marker [position]="{lat: 50.1326675, lng: 8.5713454}"></marker>
     </ngui-map>

@@ -13,8 +13,8 @@
     width: 30px;
     height: 20px;
     display: block;
-    background: red;
     margin: 30px;
+    overflow: hidden;
 }
 
 .map-expand-list{
@@ -24,10 +24,10 @@
     &-item{
         width: 30px;
         height: 0;
-        background: red;
         display: block;
         margin: 30px;
         transition: all 0.5s ease;
+        overflow: hidden;
     }
 }
 

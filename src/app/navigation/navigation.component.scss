@@ -9,6 +9,7 @@ $dot-size: 5px;
         height: 100%;
         align-items: center;
         margin: 0 30px;
+        transition: all 0.5s ease-in-out;
         &__item{
             color: white;
             display: flex;
@@ -28,6 +29,81 @@ $dot-size: 5px;
         &__link{
             color: white;
             text-decoration: none;
+            white-space: nowrap;
         }
     }
 }
+
+
+
+@media screen and (max-width: 768px){
+
+    .ds-nav{
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: black;
+        z-index: 9998;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .ds-nav-list{
+        list-style: none;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        opacity: 1;
+        &__item{
+            color: white;
+            display: block;
+            width: 100%;
+            font-size: 30px;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            &:hover,
+            &.active{
+                background: white;
+                color: black;
+                a{
+                    color: black;
+                }
+            }
+            &:not(:last-child)::after{
+                content: '';
+                display: none;
+            }
+        }
+        &__link{
+            color: white;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+    }
+    .ds-nav.is-open{
+        opacity: 1;
+        height: 100%;
+    }
+
+    .an-btn-burger-container{
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        z-index: 9999;
+    }
+}
+
+
+
+
