@@ -19,10 +19,10 @@
         </div>
     </ngx-slick>
     <div *ngIf="1 < slides.length">
-        <div class="carousel-button__container carousel-button__container--prev">
+        <div class="carousel-button__container carousel-button__container--prev" (click)="slickModal.slickNext()">
             <button class="carousel-button"><span class="glyphicon glyphicon-menu-left"></span></button>
         </div>
-        <div class="carousel-button__container carousel-button__container--next">
+        <div class="carousel-button__container carousel-button__container--next" (click)="slickModal.slickPrev()">
             <button class="carousel-button"><span class="glyphicon glyphicon-menu-right"></span></button>
         </div>
     </div>
