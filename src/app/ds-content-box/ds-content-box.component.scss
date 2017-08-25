@@ -1,7 +1,10 @@
+$title-size: 24px;
+$mobile-title-size: 20px;
+
 .ds-content-box{
     position: relative;
     &__heading{
-        top: 18px;
+        top: 14px;
         position: relative;
         display: flex;
         flex-wrap: nowrap;
@@ -16,6 +19,7 @@
     &__title{
         margin: 0 30px;
         color: white;
+        font-size: $title-size;
         white-space: nowrap;
         text-shadow: 0 1px 30px rgba(64, 13, 38, 1);
     }
@@ -40,23 +44,23 @@
     .ds-content-box{
         position: relative;
         &__heading{
-            top: 18px;
+            top: 12px;
             position: relative;
             flex-wrap: nowrap;
             align-items: center;
             text-align: center;
             .ds-deco-line--right{
-                width: 0;
+                width: 100%;
             }
             .ds-deco-line--left{
-                width: 0;
+                width: 100%;
             }
         }
         &__title{
             width: 100%;
             margin: 0 30px;
             color: white;
-            font-size: 15px;
+            font-size: $mobile-title-size;
         }
         &__body{
             color: white;

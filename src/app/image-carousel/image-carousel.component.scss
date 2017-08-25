@@ -1,8 +1,11 @@
+$carousel-height: 90vh;
+$carousel-button-size: 80px;
+
 .carousel{
-    height: 90vh;
+    height: $carousel-height;
     position: relative;
     .slide{
-        height: 60vh;
+        height: 100%;
         img{
             object-fit: cover;
             height: 100%;
@@ -15,13 +18,14 @@
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            height: 100%;
+            height: $carousel-height;
             width: 100%;
+            display: flex;
+            align-items: center;
         }
     }
 }
-$carousel-button-size: 80px;
-$carousel-button-size-mobile: 40px;
+
 .carousel-button{
     position: relative;
     width: $carousel-button-size;
@@ -39,7 +43,7 @@ $carousel-button-size-mobile: 40px;
     &__container{
         position: absolute;
         z-index: 999;
-        top: 25%;
+        top: 50%;
         transform: translate(0, -50%);
         
         &--prev{
@@ -51,11 +55,15 @@ $carousel-button-size-mobile: 40px;
     }
 }
 
+
+$mobile-carousel-button-size: 40px;
+$mobile-carousel-height: 90vh;
+
 @media screen and (max-width: 768px){
     .carousel-button{
         position: relative;
-        width: $carousel-button-size-mobile;
-        height: $carousel-button-size-mobile;
+        width: $mobile-carousel-button-size;
+        height: $mobile-carousel-button-size;
         font-size: 15px;
         &__container{
             position: absolute;
@@ -75,7 +83,7 @@ $carousel-button-size-mobile: 40px;
         height: 100%;
         position: relative;
         .slide{
-            height: 90vh;
+            height: $mobile-carousel-height;
             img{
                 object-fit: cover;
                 height: 100%;

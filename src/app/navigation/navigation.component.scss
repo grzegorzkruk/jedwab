@@ -1,5 +1,6 @@
 
 $dot-size: 5px;
+$menu-font-size: 26px;
 .ds-nav{
     height: 100px;
     &-list{
@@ -13,7 +14,7 @@ $dot-size: 5px;
         &__item{
             color: white;
             display: flex;
-            font-size: 30px;
+            font-size: $menu-font-size;
             align-items: center;
             cursor: pointer;
             &:not(:last-child)::after{
@@ -34,7 +35,7 @@ $dot-size: 5px;
     }
 }
 
-
+$menu-mobile-font-size: 30px;
 
 @media screen and (max-width: 768px){
 
@@ -67,7 +68,7 @@ $dot-size: 5px;
             color: white;
             display: block;
             width: 100%;
-            font-size: 30px;
+            font-size: $menu-mobile-font-size;
             align-items: center;
             position: relative;
             cursor: pointer;

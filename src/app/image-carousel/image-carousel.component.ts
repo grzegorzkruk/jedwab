@@ -16,6 +16,10 @@ export class ImageCarouselComponent implements OnInit {
     {
       img: "assets/img/silk.png",
       text: "Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. "
+    },
+    {
+      img: "assets/img/silk.png",
+      text: "Lorem ipsum et todore Proin iaculis purus digni consequat sem digni ssim. "
     }
   ];
   slideConfig = {

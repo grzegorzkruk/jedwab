@@ -18,10 +18,12 @@
             </div>
         </div>
     </ngx-slick>
-    <div class="carousel-button__container carousel-button__container--prev">
-        <button class="carousel-button"><span class="glyphicon glyphicon-menu-left"></span></button>
-    </div>
-    <div class="carousel-button__container carousel-button__container--next">
-        <button class="carousel-button"><span class="glyphicon glyphicon-menu-right"></span></button>
+    <div *ngIf="1 < slides.length">
+        <div class="carousel-button__container carousel-button__container--prev">
+            <button class="carousel-button"><span class="glyphicon glyphicon-menu-left"></span></button>
+        </div>
+        <div class="carousel-button__container carousel-button__container--next">
+            <button class="carousel-button"><span class="glyphicon glyphicon-menu-right"></span></button>
+        </div>
     </div>
 </div>
